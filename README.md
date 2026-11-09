@@ -65,8 +65,7 @@ Seluruh tampilan memakai **Blade** dan **CSS**. Warna utamanya navy dan putih, d
 | Framework | Laravel |
 | Bahasa | PHP, HTML, CSS |
 | Templating | Blade (`@extends`, `@section`, `@yield`, `@include`, x-component) |
-| Styling | CSS murni (Grid, Flexbox, media query) |
-| Font | Plus Jakarta Sans (Google Fonts) |
+| Styling | CSS(Grid, Flexbox, media query) |
 
 ---
 
@@ -99,20 +98,6 @@ Seluruh tampilan memakai **Blade** dan **CSS**. Warna utamanya navy dan putih, d
 
 ---
 
-## Alur Aplikasi
-
-```
-Browser ──request──▶ Route ──▶ Controller ──▶ View (Blade) ──response──▶ Browser
-```
-
-1. Pengguna membuka `/` dan mengisi form login.
-2. Form dikirim (POST) ke `/login`, lalu `PageController@authenticate` memvalidasi input.
-3. Jika valid, Controller mengarahkan ke `/dashboard?username=...`.
-4. `dashboard`, `profile`, dan `pengelolaan` membaca username dari request, menyiapkan data array, lalu mengirimnya ke View.
-5. View merender data dengan Blade dan layout utama.
-
----
-
 ## Cara Menjalankan
 
 ```bash
@@ -137,21 +122,4 @@ Buka **http://127.0.0.1:8000** di browser.
 
 ---
 
-## Halaman dan Route
 
-| Halaman | URL | Method | Keterangan |
-|---|---|---|---|
-| Login | `/` | GET | Form login |
-| Proses login | `/login` | POST | Validasi lalu redirect ke dashboard |
-| Dashboard | `/dashboard?username=` | GET | Sapaan, statistik, catatan terbaru |
-| Pengelolaan | `/pengelolaan?username=` | GET | Daftar proyek |
-| Profil | `/profile?username=` | GET | Identitas, keahlian, pendidikan |
-| Keluar | `/logout` | GET | Kembali ke login |
-
----
-
-<div align="center">
-
-Dibuat dengan Laravel dan Blade
-
-</div>
